@@ -1,0 +1,212 @@
+<html>
+<head><title>Demo NoteWriter</title></head>
+<script src="../build/wad.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<body>
+<style>
+body{
+	padding:0px;
+	margin:0px;
+}
+textarea{
+	background-color: black;
+	color:white;
+	font-size: 14px;
+	padding:10px;
+	box-sizing:border-box;
+	width: 100%;
+	height: 100vh;
+}
+</style>
+	<textarea href="#" id="playstop" placeholder="Type Here!"></textarea>
+<script type="text/javascript">
+	$('#playstop').keydown(function(e){
+		var code = e.keyCode || e.which;
+		if(code == 69 || code == 80) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'G3',
+
+  		});
+
+		}
+		if(code == 70 || code == 81) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 1.0,
+			pitch   : 'B3',
+
+  		});
+
+		}
+		if(code == 71 || code == 82) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'F3',
+
+  		});
+
+		}
+		if(code == 72 || code == 83) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'G4',
+
+  		});
+
+		}
+		if(code == 73 || code == 84) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'D4',
+
+  		});
+
+		}
+		if(code == 74 || code == 85) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'F5',
+
+  		});
+
+		}
+		if(code == 75 || code == 86) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'G5',
+
+  		});
+
+		}
+		if(code == 76 || code == 87) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'D5',
+
+  		});
+
+		}
+		if(code == 77 || code == 88) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  :2.4,
+			pitch   : 'F5',
+
+  		});
+
+		}
+		if(code == 78 || code == 89) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 5.4,
+			pitch   : 'D5',
+
+  		});
+
+		}
+		if(code == 79 || code == 90) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'B5',
+
+  		});
+
+		}
+		if(code == 65 || code == 66) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'G3',
+
+  		});
+
+		}
+		if(code == 67 || code == 68) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'E3',
+
+  		});
+
+		}
+		if(code == 190) {
+			stopped = false;
+			main.play()
+
+
+		}
+		if(code == 32) {
+			stopped = false;
+			snare.play()
+
+
+		}
+		if(code == 16) {
+			stopped = false;
+			shaker.play()
+
+
+		}
+
+
+
+
+	});
+	var bell = new Wad({source : 'http://pregasen.com/crust.wav'})
+	var main = new Wad({source : 'http://pregasen.com/NoteWriter/example/main.wav'})
+	var snare = new Wad({source : 'http://pregasen.com/NoteWriter/example/snare.wav'})
+	var shaker = new Wad({source : 'http://pregasen.com/NoteWriter/example/shaker.wav'})
+
+	var saw = new Wad({source : 'sawtooth',
+	env     : {      // This is the ADSR envelope.
+        attack  : 0.6,  // Time in seconds from onset to peak volume.  Common values for oscillators may range from 0.05 to 0.3.
+        decay   : .6,  // Time in seconds from peak volume to sustain volume.
+        sustain : .6,  // Sustain volume level. This is a percent of the peak volume, so sensible values are between 0 and 1.
+        hold    : .34, // Time in seconds to maintain the sustain volume level. If this is not set to a lower value, oscillators must be manually stopped by calling their stop() method.
+        release : 0     // Time in seconds from the end of the hold period to zero volume, or from calling stop() to zero volume.
+    },
+		vibrato : { // A vibrating pitch effect.  Only works for oscillators.
+	        shape     : 'sine', // shape of the lfo waveform. Possible values are 'sine', 'sawtooth', 'square', and 'triangle'.
+	        magnitude : 3,      // how much the pitch changes. Sensible values are from 1 to 10.
+	        speed     : 4,      // How quickly the pitch changes, in cycles per second.  Sensible values are from 0.1 to 10.
+	        attack    : 0       // Time in seconds for the vibrato effect to reach peak magnitude.
+	    },
+
+	});
+	var mixerTrack = new Wad.Poly({
+    filter  : {
+        type      : 'lowpass',
+        frequency : 200,
+        q         : 2
+    },
+
+    panning : 1
+})
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<html>
+<head><title>NoteWriter Demo</title></head>
+<script src="build/wad.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<body>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63741738-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<style>
+body{
+	padding:0px;
+	margin:0px;
+}
+textarea{
+	background-color: #1EB0A2;
+	color:white;
+	font-size: 14px;
+	padding:10px;
+	box-sizing:border-box;
+	width: 80%;
+	margin-left: 0%;
+	height: 100vh;
+	float:left;
+}
+.main{
+	width: 20%;
+	float:left;
+	height: 100vh;
+	position:relative;
+}
+
+@media screen and (max-width:650px){
+	.main{width: 50%;}
+	textarea{width: 50%;}
+}
+
+.logo{
+	width: 50%;
+	margin-left: 25%;
+	margin-top:30px;
+}
+.logomini{
+	width: 30%;
+	margin-left: 35%;
+	margin-top:20px;
+}
+.block{
+	width: 50%;
+	margin-left: 25%;
+	margin-top:10px;
+	font-family: Lato, sans-serif;
+	color: grey;
+	font-weight: 700;
+	text-align: center;
+	font-size: 12px;
+	letter-spacing: 2px;
+}
+.block_bottom{
+	width: 100%;
+	bottom:10px;
+	font-family: Lato, sans-serif;
+	color: grey;
+	font-weight: 700;
+	text-align: center;
+	font-size: 12px;
+	letter-spacing: 3px;
+	position: absolute;
+}
+.thin{
+	letter-spacing: auto;
+	font-weight: 300;
+}
+::-webkit-input-placeholder {
+   color: rgba(230,230,230,1);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: rgba(230,230,230,1);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: rgba(230,230,230,1);
+}
+
+:-ms-input-placeholder {
+	color: rgba(230,230,230,1);
+}
+a{
+	color: grey;
+	text-decoration: none;
+}
+</style>
+	<div class="main">
+	<img class='logo' src="logo.png">
+	<div class="block">NOTEWRITER</div>
+	<div class="block" style="margin-top: 60px;">Write stories while making music. </div>
+	<div class="block thin" style="margin-top: 60px;">Due to audio engine concerns, please use either Chrome
+	or Firefox on desktop.  </div>
+	<img class='logomini' src="chrome.png">
+	<img class='logomini' src="mozilla.png">
+	<div class="block_bottom"><a href="http://ugtimes.com">AN UGT CREATION</a></div>
+
+
+	</div>
+	<textarea href="#" id="playstop" placeholder="Type Here!"></textarea>
+<script type="text/javascript">
+	$('#playstop').keydown(function(e){
+		var code = e.keyCode || e.which;
+		if(code == 69 || code == 80) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'D6',
+
+  		});
+
+		}
+		if(code == 70 || code == 81) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 1.0,
+			pitch   : 'B7',
+
+  		});
+
+		}
+		if(code == 71 || code == 82) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'G7',
+
+  		});
+
+		}
+		if(code == 72 || code == 83) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'G4',
+
+  		});
+
+		}
+		if(code == 73 || code == 84) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'D4',
+
+  		});
+
+		}
+		if(code == 74 || code == 85) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'B4',
+
+  		});
+
+		}
+		if(code == 75 || code == 86) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'G5',
+
+  		});
+
+		}
+		if(code == 76 || code == 87) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'D5',
+
+  		});
+
+		}
+		if(code == 77 || code == 88) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  :2.4,
+			pitch   : 'G6',
+
+  		});
+
+		}
+		if(code == 78 || code == 89) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.4,
+			pitch   : 'D5',
+
+  		});
+
+		}
+		if(code == 79 || code == 90) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 1.4,
+			pitch   : 'B5',
+
+  		});
+
+		}
+		if(code == 66) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 1.5,
+			pitch   : 'G3',
+
+  		});
+
+		}
+		if(code == 65) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 2.0,
+			pitch   : 'B7',
+
+  		});
+
+		}
+		if(code == 67) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 1.5,
+			pitch   : 'F3',
+
+  		});
+
+		}
+		if(code == 68) {
+			stopped = false;
+			mixerTrack.add(saw);
+			saw.play({
+    	volume  : 1.5,
+			pitch   : 'G5',
+
+  		});
+
+		}
+		if(code == 190) {
+			stopped = false;
+		//	main.play()
+
+
+		}
+		if(code == 32) {
+			stopped = false;
+	//		snare.play()
+
+
+		}
+		if(code == 16) {
+			stopped = false;
+
+			saw.play({
+    	volume  : 1.4,
+			pitch   : 'G2',
+
+  		});
+
+
+		}
+
+
+
+
+	});
+	var bell = new Wad({source : 'http://pregasen.com/crust.wav'})
+	var main = new Wad({source : 'http://pregasen.com/NoteWriter/example/main.wav'})
+	var snare = new Wad({source : 'http://pregasen.com/NoteWriter/example/snare.wav'})
+	var shaker = new Wad({source : 'http://pregasen.com/NoteWriter/example/shaker.wav'})
+
+	var saw = new Wad({source : 'sawtooth',
+	env     : {      // This is the ADSR envelope.
+        attack  : 0.6,  // Time in seconds from onset to peak volume.  Common values for oscillators may range from 0.05 to 0.3.
+        decay   : .6,  // Time in seconds from peak volume to sustain volume.
+        sustain : .6,  // Sustain volume level. This is a percent of the peak volume, so sensible values are between 0 and 1.
+        hold    : .34, // Time in seconds to maintain the sustain volume level. If this is not set to a lower value, oscillators must be manually stopped by calling their stop() method.
+        release : .23     // Time in seconds from the end of the hold period to zero volume, or from calling stop() to zero volume.
+    },
+		vibrato : { // A vibrating pitch effect.  Only works for oscillators.
+	        shape     : 'sine', // shape of the lfo waveform. Possible values are 'sine', 'sawtooth', 'square', and 'triangle'.
+	        magnitude : 7,      // how much the pitch changes. Sensible values are from 1 to 10.
+	        speed     : 4,      // How quickly the pitch changes, in cycles per second.  Sensible values are from 0.1 to 10.
+	        attack    : 0       // Time in seconds for the vibrato effect to reach peak magnitude.
+	    },
+
+	});
+	var mixerTrack = new Wad.Poly({
+    filter  : {
+        type      : 'lowpass',
+        frequency : 200,
+        q         : 2
+    },
+
+    panning : 1
+})
+
+
+</script>
+</body>
+</html>
